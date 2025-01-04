@@ -1,0 +1,25 @@
+@use "../variables.scss" as *;
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__element {
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+  }
+
+  &__error {
+    color: rgb(255, 113, 113);
+    font-size: 1.4rem;
+  }
+}

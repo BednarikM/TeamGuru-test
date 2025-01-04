@@ -1,0 +1,63 @@
+@use "../variables.scss" as *;
+
+.login-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-blue-dark;
+  border-radius: 2xp;
+  gap: 3rem;
+  width: 30rem;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__submit-error {
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 8rem;
+    font-weight: 600;
+    width: 100%;
+    background-color: $color-error-light;
+    color: $color-error-dark;
+    border-left: 1rem solid $color-error-dark;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 1.6rem;
+    color: $color-white;
+    background-color: $color-blue-light;
+    font-weight: 600;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue-light;
+      background-color: $color-white;
+    }
+
+    &--reset {
+      background-color: $color-error-light;
+      color: $color-error-dark;
+
+      &:hover {
+        background-color: $color-error-dark;
+        color: $color-error-light;
+      }
+    }
+  }
+}

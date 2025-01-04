@@ -1,0 +1,59 @@
+@use "../variables.scss" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem 3rem;
+  background: radial-gradient(rgb(0, 46, 99), rgb(0, 28, 59));
+
+  &__user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__user-name {
+    font-size: 2rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 1.4rem;
+    color: $color-blue-dark;
+    background-color: $color-white;
+    font-weight: 600;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-error-light;
+      color: $color-error-dark;
+    }
+  }
+
+  &__navlink-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__navlink-item {
+    font-size: 2rem;
+    color: $color-gold;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+}

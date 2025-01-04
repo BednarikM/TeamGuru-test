@@ -1,0 +1,67 @@
+@use "../variables.scss" as *;
+
+.user-detail {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-blue-dark;
+  border-radius: 2xp;
+  width: 30rem;
+  gap: 2rem;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+
+    input:disabled {
+      background-color: rgb(44, 44, 44);
+      color: $color-white;
+    }
+  }
+
+  &__geolocation-content {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    width: 100%;
+    height: 6rem;
+    background-color: $color-blue-light;
+    justify-content: center;
+    font-size: 1.4rem;
+    gap: 0.5rem;
+    white-space: pre;
+  }
+
+  &__geolocation-error {
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 8rem;
+    font-weight: 600;
+    width: 100%;
+    background-color: $color-error-light;
+    color: $color-error-dark;
+    border-left: 1rem solid $color-error-dark;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 1.6rem;
+    color: $color-white;
+    background-color: $color-blue-light;
+    font-weight: 600;
+    border: 3px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue-light;
+      background-color: $color-white;
+    }
+  }
+}
