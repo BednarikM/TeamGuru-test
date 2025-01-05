@@ -37,23 +37,4 @@
       color: $color-error-dark;
     }
   }
-
-  &__navlink-list {
-    display: flex;
-    gap: 2rem;
-  }
-
-  &__navlink-item {
-    font-size: 2rem;
-    color: $color-gold;
-
-    &:hover,
-    &:active {
-      text-decoration: underline;
-    }
-
-    &--active {
-      text-decoration: underline;
-    }
-  }
 }

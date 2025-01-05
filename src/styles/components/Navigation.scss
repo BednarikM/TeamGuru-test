@@ -1,0 +1,20 @@
+@use "../variables.scss" as *;
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+
+  &__item {
+    font-size: 2rem;
+    color: $color-gold;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &--active {
+      text-decoration: underline;
+    }
+  }
+}

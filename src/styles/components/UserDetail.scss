@@ -13,38 +13,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 1rem;
 
     input:disabled {
       background-color: rgb(44, 44, 44);
       color: $color-white;
     }
-  }
-
-  &__geolocation-content {
-    display: flex;
-    padding: 1rem;
-    flex-direction: column;
-    width: 100%;
-    height: 6rem;
-    background-color: $color-blue-light;
-    justify-content: center;
-    font-size: 1.4rem;
-    gap: 0.5rem;
-    white-space: pre;
-  }
-
-  &__geolocation-error {
-    padding: 1rem 2rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 8rem;
-    font-weight: 600;
-    width: 100%;
-    background-color: $color-error-light;
-    color: $color-error-dark;
-    border-left: 1rem solid $color-error-dark;
   }
 
   &__btn {

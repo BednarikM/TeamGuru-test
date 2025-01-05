@@ -1,17 +1,13 @@
-import { useContext, useMemo } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { UserContext } from "../store/UserContext";
 import { GeolocationContext } from "../store/geolocationContext";
 import { formatPathName } from "../utils/utils";
 
-import "../styles/components/Header.scss";
+import Navigation from "./Navigation";
 
-// CONSTANTS
-let NAV_LINKS = [
-  { name: "Home", path: "/" },
-  { name: "Login", path: "login" },
-];
+import "../styles/components/Header.scss";
 
 // COMPONENT FUNCTION
 export default function Header() {
@@ -28,16 +24,6 @@ export default function Header() {
   } else {
     pageName = formatPathName(location.pathname);
   }
-
-  const navLinks = useMemo(() => {
-    if (loggedUser) {
-      return [
-        ...NAV_LINKS.filter((link) => link.name !== "Login"),
-        { name: "User detail", path: "/user-detail" },
-      ];
-    }
-    return NAV_LINKS;
-  }, [loggedUser]);
 
   // FUNCTION
   function handleLogout() {
@@ -59,20 +45,7 @@ export default function Header() {
           </button>
         </div>
       )}
-      <ul className="header__navlink-list">
-        {navLinks.map((link) => (
-          <li key={link.name} className="header__navlink-item">
-            <NavLink
-              to={link.path}
-              className={({ isActive }) =>
-                isActive ? "header__navlink-item--active" : undefined
-              }
-            >
-              {link.name}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+      <Navigation />
     </div>
   );
 }
